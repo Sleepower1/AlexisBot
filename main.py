@@ -8,7 +8,7 @@ from generate_meme import generate_meme
 keep_alive()
 bot_token = os.environ['bot_token']
 
-allowed_user_id = ['525108125615783966','445819178151313428']
+allowed_user_id = ["Targeted User ID"]
 
 # Define the intents
 intents = discord.Intents.default()
@@ -34,9 +34,8 @@ async def on_message(message):
         # Respond with a specific phrase
         await generate_meme(message.content, message.channel)
         num = random.randrange(0,len(affirmations))
-        await message.channel.send("<@" + str(445819178151313428) + "> "+affirmations[num])
-        #await message.channel.send("<@" + str(525108125615783966) + ">")
-    elif str(message.author.id) == '284274156399362048' and message.content == "ping":
+        await message.channel.send("<@" + str("Targeted User ID") + "> "+affirmations[num])
+    elif str(message.author.id) == '"Targeted User ID"' and message.content == "ping":
         await message.channel.send('Hello! This is a specific response for you.')
 
     # Let the bot process commands as well
