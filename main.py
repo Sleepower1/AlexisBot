@@ -6,7 +6,7 @@ from keep_alive import keep_alive
 import random
 from generate_meme import generate_meme
 keep_alive()
-bot_token = 'MTE3Njg3MjIyNzQwMTEwNTQ4MA.GZzNgR.qB600iZ8Z8N-xp4emWT43VYCtsM2Ce9ktFWh5k'
+bot_token = os.environ['bot_token']
 
 allowed_user_id = ['525108125615783966','445819178151313428']
 
