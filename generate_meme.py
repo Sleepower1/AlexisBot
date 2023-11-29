@@ -8,7 +8,7 @@ import random
 
 async def generate_meme(message_content, channel):
   # Open an image (replace 'paul.jpg' with the path to your meme template)
-  new_dict = {0:'alexis.jpg',1:'alexis_mump.png'}
+  new_dict = {"Upload Own Image Here"}
   num = random.randrange(0,len(new_dict))
   meme_template = Image.open(new_dict[num])
 
@@ -69,10 +69,10 @@ async def generate_meme(message_content, channel):
   draw.text((bottom_x, bottom_y), bottom_text, fill='white', font=font, stroke_width=5, stroke_fill='black')
 
   # Save the generated meme
-  meme_template.save('alexis1.jpg')
+  meme_template.save('new_meme.jpg')
 
   # Send the meme to the Discord channel
-  await channel.send(file=discord.File('alexis1.jpg'))
+  await channel.send(file=discord.File('new_meme.jpg'))
 
   # Delete the paul1.jpg file
-  os.remove('alexis1.jpg')
+  os.remove('new_meme.jpg')
